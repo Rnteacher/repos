@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700&display=swap');
+:root {
+    --primary-color: rgb(219,4,4);
+    --gray: #cac7c7;
+    --overlay: #0000009c;
+    font-size: 62.5%;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+.center {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 5rem 0 5rem 0;
+}
+
+.bg-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+img {
+    max-width: 100%;
+    border-radius: 5px;
+    display: block;
+    object-fit: cover;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+#logo {
+    display: none;
+}
+
+nav li a {
+    color:white;
+    padding: 0.0625rem;
+    display: block;
+}
+
+nav li a:hover {
+    color: var(--primary-color);
+    background-color: white;
+    cursor: pointer;
+    transition: .3s ;
+}
+
+.bg-home {
+    background: url(data/1.jpg);
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-blend-mode: multiply;
+    background-color: var(--overlay);
+}
+
+.home hr{
+    border-color: var(--primary-color);
+    margin-top: 1.2em;
+}
+
+.home p{
+    font-size: 2rem;
+    margin-top: 1em;
+    font-weight: 300;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+}
+
+.features-card {
+    border: 1px solid white;
+    width: 29rem;
+    font-size: 1.5rem;
+    margin: 3rem;
+    padding: 1.5em
+}
+
+.features-card i{
+    font-size: 100px;
+}
+
+.fa-circle-check {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.information-one li, .information-two li{
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: .3em
+}
+
+#information-two {
+    background-color: var(--gray);
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    
+}
+.card {
+    width: 23rem;
+    height: 27em;
+    margin: 3rem;
+    box-shadow: 2px 5px 7px 1px;
+    position: relative;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    background-color: white;
+    color: black;
+    
+}
+.card:hover{
+    transform: translateY(3px);
+}
+
+.avatar{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color)
+}
+
+.upper-section{
+    background-color: black;
+    height: 35%;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+.img-container {
+    position: absolute;
+    top: 17%;
+    left: 27%
+}
+.lower-section{
+    height: 65%;
+    padding: .095em;
+}
+.info {
+    margin-top: 25%;
+
+}
+.card-name{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-family: oswald, sans-serif;
+}
+.card-title{
+    text-transform: uppercase;
+    font-weight: 300;
+
+}
+.card-line{
+    color: var(--primary-color);
+    width: 80%;
+    margin: 1rem auto;
+}
+.card-description{
+    font-family: Montserrat, sans-serif;;
+}
+.social-icons{
+    font-size: 2.7rem;
+    margin-top: .5em;
+    cursor: pointer;
+}
+
+.bg-purchase {
+    background: url(data/7.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    background-color: var(--overlay);
+    background-blend-mode: multiply;
+}
+
+.purchase p{
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+input[type="text"],input[type="email"],textarea{
+    width: 100%;
+    border-radius: 5px 5px;
+    outline: none;
+    padding: .3em;
+    background: transparent;
+    font-size: 1.5rem;
+    color: white;
+    border: 2px solid;
+    margin-bottom: 1em;
+    font-family: inherit;
+
+}
+input[type="text"]:focus,input[type="email"]:focus,textarea:focus{
+    outline:2px solid;
+}
+.contact label{
+    font-size: 1.4rem;
+}
+
+h1 {
+    font-size: 4.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h2, h3, h4, h5{
+    font-size: 3rem;
+    padding: .2em;
+    margin-bottom: 1em;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+h6 {
+    font-size: 2.5rem;
+    margin: .5em;
+    line-height: 1.5;
+    font-weight: 400;
+}
+.btn {
+    padding: .8rem;
+    font-family: inherit;
+    font-weight: 500;
+    border-radius: 6px;
+    color: white;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: translateY(2px);
+}
+
+.btn-download, .btn-subscribe, .btn-order,.btn-purchase {
+    color: white;
+    background-color: var(--primary-color);
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding: .4em 1.3em;
+    text-shadow: 0 1px 2px black;
+    box-shadow: -2px 1px 1px 1px var(--primary-color);
+    margin-top: 2em;
+}
+
+.btn-order {
+    margin-bottom: 1em;
+}
+
+.btn-download:hover, .btn-subscribe:hover, .btn-order:hover,.btn-purchase:hover {
+    position: relative;
+    top: 1px
+
+}
+
+.btn-submit {
+    color: var(--primary-color);
+    background-color: white;
+    font-size: 2rem;
+    width: 100%;
+    margin-top: 2rem;
+    font-weight: 300;
+    border: 1px solid;
+}
+.btn-submit:hover{
+    background-color: var(--primary-color);
+    color: white;
+}
+.fa-facebook{
+    color:#3f62a9;
+}
+.fa-twitter {
+    color: #1c99e7;
+}
+.fa-instagram {
+    color: #ef1e43;
+}
+
+footer {
+    background-color: #ff0000;
+    color: white;
+    font-size: 1.5rem;
+    padding: 2em;
+    text-align: center;
+}
+hr{
+    border-color: var(--primary-color);
+}
+
+@media (min-width: 480px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+    }
+    
+    nav ul{
+        display: flex;
+        margin-right: 1em
+    }
+
+    nav li a{
+        color: black;
+        margin-left: .5em;
+        font-weight: 600;
+    }
+
+    #logo {
+        display: unset;
+        width: 80px;
+        height: 70px;
+
+    }
+}
+
+
+@media (min-width: 720px) {
+    h1 {
+        font-size: 5rem;
+    }
+    h2,h3,h4,h5{
+        font-size: 3.5rem;
+    }
+
+    .home, .information-one, .information-two, form {
+        width: 80%;
+        margin: auto;
+    }
+    .btn {
+        width: 25rem;
+    }
+
+}
+
+@media (min-width: 900px) {
+    nav li a {
+        margin-right: 1em;
+    }
+    h3{
+        font-size: 2.2rem;
+    }
+    
+    .information-one, .information-two {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-item-one,.grid-item-two {
+        margin: auto;
+    }
+
+    .purchase {
+        padding: 10rem;
+    }
+
+    form {
+        width: 55rem;
+    }
+    .contact label {
+        font-size: 1.5rem;
+    }
+
+    footer{
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+}
+
+@media (min-width: 1200px) {
+    .center {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    header{
+        justify-content: space-evenly;
+    }
+}

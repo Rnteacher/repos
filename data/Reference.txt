@@ -1,0 +1,36 @@
+REPOS PEODUCT LANDING WEB PAGE
+
+Font-awesome CDN Link
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+Font-awesome Icons
+<i class="fa-solid fa-earth-africa feature-icons"></i>
+<i class="fa-solid fa-pen-to-square"></i>
+<i class="fa-solid fa-comments"></i>
+
+Check
+<i class="fa-solid fa-circle-check"></i>
+
+Social Icons
+<i class="fab fa-facebook"></i>
+<i class="fab fa-twitter"></i>
+<i class="fab fa-instagram"></i>  
+
+Coffee mug
+<i class="fa-solid fa-mug-hot"></i>
+
+
+FONT FAMILY
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&display=swap');
+font-family: 'Poppins', sans-serif;
+
+SOCIAL COLORS
+.fa-instagram{
+    color: #ef1e43;
+}
+.fa-twitter{
+    color: #1c99e7;
+}
+.fa-facebook{
+    color: #3f62a9;
+}
