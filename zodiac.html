@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="zodiac.css">
+</head>
+<body>
+    <div class="converter-container">
+        <h1>Date Converter</h1>
+        <input type="date" id="dateInput">
+        <button id="convertBtn" class="btn">Convert</button>
+        <div id="results" class="hidden">
+            <p>Hebrew Date: <span id="hebrew"></span></p>
+            <p>Western Zodiac: <span id="western"></span></p>
+            <p>Chinese Zodiac: <span id="chinese"></span></p>
+        </div>
+    </div>
+    <script src="zodiac.js"></script>
+</body>
+</html>
