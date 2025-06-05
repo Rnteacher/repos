@@ -20,11 +20,59 @@ function getChineseZodiac(year) {
     return animals[(year - 4) % 12];
 }
 
-document.getElementById('convertBtn').addEventListener('click', function() {
+const GERESH = '\u05F3'; // ׳
+const GERSHAYIM = '\u05F4'; // ״
+
+function numberToHebrew(num) {
+    const units = ['', 'א', 'ב', 'ג', 'ד', 'ה', 'ו', 'ז', 'ח', 'ט'];
+    const tens = ['', 'י', 'כ', 'ל', 'מ', 'נ', 'ס', 'ע', 'פ', 'צ'];
+    const hundreds = ['', 'ק', 'ר', 'ש', 'ת', 'תק', 'תר', 'תש', 'תת', 'תתק'];
+
+    let result = '';
+    const h = Math.floor(num / 100);
+    if (h) result += hundreds[h];
+
+    let rem = num % 100;
+    if (rem === 15) result += 'טו';
+    else if (rem === 16) result += 'טז';
+    else {
+        const t = Math.floor(rem / 10);
+        if (t) result += tens[t];
+        const o = rem % 10;
+        if (o) result += units[o];
+    }
+
+    if (result.length > 1) result = result.slice(0, -1) + GERSHAYIM + result.slice(-1);
+    else if (result.length === 1) result += GERESH;
+    return result;
+}
+
+function formatHebrewDate(date) {
+    const parts = new Intl.DateTimeFormat('he-u-ca-hebrew', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric'
+    }).formatToParts(date);
+
+    let day = 0, month = '', year = 0;
+    for (const p of parts) {
+        if (p.type === 'day') day = parseInt(p.value, 10);
+        else if (p.type === 'month') month = p.value;
+        else if (p.type === 'year') year = parseInt(p.value, 10);
+    }
+
+    const thousands = Math.floor(year / 1000);
+    const rest = year % 1000;
+    const yearHeb = (thousands ? numberToHebrew(thousands) : '') + numberToHebrew(rest);
+
+    return `${numberToHebrew(day)} ב${month} ${yearHeb}`;
+}
+
+document.getElementById('convertBtn').addEventListener('click', function () {
     const value = document.getElementById('dateInput').value;
     if (!value) return;
     const date = new Date(value + 'T00:00:00');
-    const hebrew = new Intl.DateTimeFormat('he-u-ca-hebrew', { day: 'numeric', month: 'long', year: 'numeric' }).format(date);
+    const hebrew = formatHebrewDate(date);
     const western = getWesternZodiac(date);
     const chinese = getChineseZodiac(date.getFullYear());
     document.getElementById('hebrew').textContent = hebrew;
